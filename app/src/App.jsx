@@ -1,5 +1,8 @@
+import {Container} from "./components/Container";
+
 export default function App() {
     return <>
-        <p>TEST</p>
+        <Container className="siema">Testowy</Container>
+        <p>Siema</p>
     </>
 }
