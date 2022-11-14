@@ -1,6 +1,6 @@
-export const Form = ({target, action, method, className, id, children}) => {
+export const Form = ({target, action, method, id, className, children}) => {
     return <>
-        <form target={target} action={action} method={method} className={className} id={id}>
+        <form target={target} action={action} method={method} id={id} className={className}>
             {children}
         </form>
     </>
