@@ -20,11 +20,11 @@ export const User = () => {
                     Not logged User site
                 </Header>
             </Container>
-            <Container className="main">
-                <Container id="login">
+            <Container className="main centered">
+                <Container id="login" className="centered">
                     <Login />
                 </Container>
-                <Container id="register">
+                <Container id="register" className="centered">
                     <Register />
                 </Container>
             </Container>

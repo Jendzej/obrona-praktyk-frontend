@@ -1,0 +1,23 @@
+/*#login {*/
+/*    float:left;*/
+/*}*/
+/*#register {*/
+/*    float: right;*/
+/*}*/
+
+.centered {
+    text-align: center;
+}
+.main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 40%;
+    align-content: center;
+    justify-content: center;
+}
+#register {
+    grid-column-start: 2;
+}
+#login {
+    grid-column-end: 2;
+}
