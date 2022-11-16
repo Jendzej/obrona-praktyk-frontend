@@ -8,12 +8,12 @@ export default async function handleRegister(username, email, first_name, last_n
             ContentType: 'application/json'
         },
         body: JSON.stringify({
-            username: username,
-            email: email,
-            first_name: first_name,
-            last_name: last_name,
-            password: password,
-            school_class: school_class
+            "username": username,
+            "email": email,
+            "first_name": first_name,
+            "last_name": last_name,
+            "password": password,
+            "school_class": school_class
         })
     }
     try {

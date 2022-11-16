@@ -21,8 +21,9 @@ export const Register = () => {
             <Input id="password" label="Type password:" onChange={(e) => {setPassword(e.target.value)}}/>
             <Input id="school-class" label="Type school class:" onChange={(e) => {setSchoolClass(e.target.value)}}/>
 
-            <Button type="submit" onClick={() => {
+            <Button type="submit" onClick={(e) => {
                 let res = handleRegister(username, email, first, last, password, schoolClass)
+                e.preventDefault()
             }}>
                 Send
             </Button>
