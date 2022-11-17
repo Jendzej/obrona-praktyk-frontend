@@ -1,5 +1,3 @@
-
-
 export default async function handleRegister(username, email, first_name, last_name, password, school_class) {
     const settings = {
         method: 'POST',
