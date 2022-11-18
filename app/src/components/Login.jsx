@@ -24,9 +24,9 @@ export const Login = () => {
                         }
                     })
                 let results = await response
-                !results ? setToken("")
-                    : setToken(results['access_token'])
-                console.log(token)
+                !results ? console.log(results)
+                    : console.log(results['access_token'])
+                // console.log(token)
             }}> Send </Button>
         </Form>
     </>
