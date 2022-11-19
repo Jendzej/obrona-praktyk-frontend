@@ -18,7 +18,7 @@ export default async function handleRegister(username, email, first_name, last_n
         const backend_host = process.env.REACT_APP_BACKEND_HOST
         const backend_port = process.env.REACT_APP_BACKEND_PORT
 
-        let fetchResponse = fetch(`http://${backend_host}:${backend_port}/add_user`, settings);
+        let fetchResponse = fetch(`http://${backend_host}:${backend_port}/user`, settings);
         return await fetchResponse;
     } catch (e) {
         return e;

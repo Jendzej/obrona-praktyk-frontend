@@ -12,7 +12,7 @@ export const handleLogin = async (username, password) => {
     try {
         const backendHost = process.env.REACT_APP_BACKEND_HOST
         const backendPort = process.env.REACT_APP_BACKEND_PORT
-        const login = fetch(`http://${backendHost}:${backendPort}/token`, settings)
+        const login = fetch(`http://${backendHost}:${backendPort}/auth`, settings)
         return await login
     } catch (e) {
         return e;
