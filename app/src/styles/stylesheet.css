@@ -8,9 +8,14 @@
     align-content: center;
     justify-content: center;
 }
-#register {
+.right_grid {
+    grid-row-start: 1;
     grid-column-start: 2;
 }
-#login {
+.left-grid {
+    grid-row-start: 1;
     grid-column-end: 2;
+}
+.center-grid {
+    grid-column: 1/-1;
 }

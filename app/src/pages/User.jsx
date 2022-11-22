@@ -21,10 +21,10 @@ export const User = () => {
                 </Header>
             </Container>
             <Container className="main centered">
-                <Container id="login" className="centered">
+                <Container id="login" className="centered right_grid">
                     <Login />
                 </Container>
-                <Container id="register" className="centered">
+                <Container id="register" className="centered left-grid">
                     <Register />
                 </Container>
             </Container>

@@ -1,4 +1,4 @@
-export async function handleSchoolClasses() {
+export async function handleFetch(url) {
     const settings = {
         method: 'GET',
         headers: {
@@ -7,13 +7,9 @@ export async function handleSchoolClasses() {
         }
     }
     try {
-        const backend_host = process.env.REACT_APP_BACKEND_HOST
-        const backend_port = process.env.REACT_APP_BACKEND_PORT
-
-        let fetchResponse = fetch(`http://${backend_host}:${backend_port}/school_class`, settings)
+        let fetchResponse = fetch(url, settings)
             .then(response => response.json())
         return await fetchResponse
-
     } catch (e) {
         return e
     }
