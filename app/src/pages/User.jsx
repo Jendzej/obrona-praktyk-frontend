@@ -4,12 +4,17 @@ import {Register} from "../components/Register";
 import {Login} from "../components/Login";
 
 export const User = () => {
-    let logged_in = false
+    let logged_in
+    if (localStorage.getItem('jwt-token') !== null){
+        logged_in = true
+    } else {
+        logged_in = false
+    }
     if (logged_in) {
         return <>
             <Container className="main">
                 <Header size="1" id="user-header">
-                    Logged User site
+                    Your account
                 </Header>
             </Container>
         </>

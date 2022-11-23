@@ -8,7 +8,9 @@ export const Home = () => {
             <Container className="header center-grid">
                 <Header size="1" id="home-header" className="">Home site</Header>
             </Container>
-            <Items/>
+            <Container className="center-grid">
+                <Items/>
+            </Container>
         </Container>
     </>
 }

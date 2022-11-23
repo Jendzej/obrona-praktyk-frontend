@@ -7,7 +7,6 @@ import {handleLogin} from "../functions/handleLogin";
 export const Login = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [token, setToken] = useState("")
     return <>
         <Form method="POST">
             <Input id="username" label="Type username:" onChange={(e) => {setUsername(e.target.value)}}/>
@@ -24,9 +23,11 @@ export const Login = () => {
                         }
                     })
                 let results = await response
-                !results ? console.log(results)
-                    : console.log(results['access_token'])
-                // console.log(token)
+                if (results) {
+                    localStorage.setItem('jwt-token', results['access_token'])
+                    localStorage.setItem('username', username)
+                }
+                window.location.reload(false)
             }}> Send </Button>
         </Form>
     </>
