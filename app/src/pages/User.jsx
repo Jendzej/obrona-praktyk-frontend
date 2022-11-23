@@ -2,6 +2,7 @@ import {Container} from "../components/Container";
 import {Header} from "../components/Header";
 import {Register} from "../components/Register";
 import {Login} from "../components/Login";
+import {UserData} from "../components/UserData";
 
 export const User = () => {
     let logged_in
@@ -12,10 +13,13 @@ export const User = () => {
     }
     if (logged_in) {
         return <>
-            <Container className="main">
+            <Container className="header">
                 <Header size="1" id="user-header">
                     Your account
                 </Header>
+            </Container>
+            <Container className="main centered center-grid">
+                <UserData/>
             </Container>
         </>
     } else {

@@ -14,7 +14,6 @@ export const Items = () => {
         }
         fetchItems()
     }, [])
-    console.log(items)
     return <>
         <Container className="all-items center-grid">
             {items.map((item, index) => (
