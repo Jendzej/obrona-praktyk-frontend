@@ -1,5 +1,6 @@
 import {Container} from "../components/Container";
 import {Header} from "../components/Header";
+import {EditItems} from "../components/admin/EditItems";
 
 export const Admin = () => {
     return <>
@@ -7,6 +8,7 @@ export const Admin = () => {
             <Header size="1" id="admin-header">
                 Admin Site
             </Header>
+            <EditItems/>
         </Container>
     </>
 }

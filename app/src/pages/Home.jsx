@@ -1,6 +1,6 @@
 import {Container} from "../components/Container";
 import {Header} from "../components/Header";
-import {Items} from "../components/Items";
+import {Items} from "../components/api_related/Items";
 
 export const Home = () => {
     return <>

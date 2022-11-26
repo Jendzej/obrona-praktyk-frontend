@@ -1,17 +1,19 @@
-export async function handleFetchJWT(url) {
+import {useContext} from "react";
+import {UserContext} from "../components/UserProvider";
+
+export async function handleFetchJWT(url, token) {
     const settings = {
         method: 'GET',
         headers: {
             'accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('jwt-token')}`
+            'Authorization': `Bearer ${token}`
         }
     }
     try {
-        let fetchResponse = fetch(url, settings)
-            .then(response => response.json())
-        return await fetchResponse
-    } catch (e) {
-        return e
+        const response = await fetch(url, settings)
+        return await response.json()
+    } catch (er) {
+        return er
     }
 }

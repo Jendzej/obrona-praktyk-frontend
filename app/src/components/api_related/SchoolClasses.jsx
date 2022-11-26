@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import {handleFetch} from "../functions/handleFetch";
-import {Container} from "./Container";
+import {handleFetch} from "../../functions/handleFetch";
+import {Container} from "../Container";
 
 export const SchoolClasses = ({className, onChange, id}) => {
     const [schoolClasses, setSchoolClasses] = useState([])
@@ -11,6 +11,7 @@ export const SchoolClasses = ({className, onChange, id}) => {
             const data = await handleFetch(`http://${backend_host}:${backend_port}/school_class`)
             setSchoolClasses(data)
         }
+
         fetchData()
     }, [])
     return <>

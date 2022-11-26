@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
 html {
     font-family: 'Mulish', sans-serif;
 }
+
 .centered {
     text-align: center;
 }
+
 .main {
     display: grid;
     width: 100%;
@@ -12,14 +15,17 @@ html {
     align-content: center;
     justify-content: center;
 }
+
 .right_grid {
     grid-row-start: 1;
     grid-column-start: 2;
 }
+
 .left-grid {
     grid-row-start: 1;
     grid-column-end: 2;
 }
+
 .center-grid {
     grid-column: 1/-1;
 }
@@ -48,6 +54,7 @@ html {
     padding: 10px;
     position: relative;
 }
+
 .single-item > .image {
     grid-row: 1;
     grid-column-start: 1;
@@ -56,25 +63,66 @@ html {
     height: 100%;
     max-width: 100%;
 }
+
 .item-price {
     font-style: italic;
 }
+
 .add-to-cart {
     position: absolute;
     grid-column: 2;
     grid-row: 2;
     bottom: 20px;
 }
+
 .add-to-cart > Button {
     width: 200%;
     height: 50px;
 }
+
 li {
     display: inline-block;
     text-align: center;
-    width: 33%;
+    /*width: 33%;*/
+    min-width: 33%;
+    max-width: 50%;
 }
+
 ul {
     list-style-type: none;
     text-align: center;
+}
+
+.transaction-item > img {
+    max-width: 70%;
+}
+
+.single-transaction {
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    gap: 2%;
+    padding-bottom: 5%;
+    border: 1px solid black;
+}
+
+.transaction-item {
+    max-width: 100%;
+    height: 30%;
+    text-align: center;
+    font-size: 1vmax;
+}
+
+.transaction-time {
+    grid-row: 1;
+    grid-column: 1/ -1;
+    text-align: center;
+}
+
+.transaction-price {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.edit-item-form {
+    grid-row: 2;
 }

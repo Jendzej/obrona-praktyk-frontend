@@ -1,42 +1,19 @@
-import {Container} from "../components/Container";
-import {Header} from "../components/Header";
-import {Register} from "../components/Register";
-import {Login} from "../components/Login";
-import {UserData} from "../components/UserData";
+import {useContext} from "react";
+import {UserContext} from "../components/UserProvider";
+import {parseJWT} from "../utilities/parseJWT";
+import {Logged} from "../components/user/Logged";
+import {NotLogged} from "../components/user/NotLogged";
 
 export const User = () => {
-    let logged_in
-    if (localStorage.getItem('jwt-token') !== null){
-        logged_in = true
-    } else {
-        logged_in = false
-    }
-    if (logged_in) {
+    if (localStorage.getItem('logged') === 'true' && parseJWT(localStorage.getItem('jwt-token')).exp > Math.round(Date.now() / 1000)) {
         return <>
-            <Container className="header">
-                <Header size="1" id="user-header">
-                    Your account
-                </Header>
-            </Container>
-            <Container className="main centered center-grid">
-                <UserData/>
-            </Container>
+            <Logged/>
         </>
     } else {
+        localStorage.setItem('jwt-token', null)
+        localStorage.setItem('logged', false)
         return <>
-            <Container className="header">
-                <Header size="1" id="user-header">
-                    Not logged User site
-                </Header>
-            </Container>
-            <Container className="main centered">
-                <Container id="login" className="centered right_grid">
-                    <Login />
-                </Container>
-                <Container id="register" className="centered left-grid">
-                    <Register />
-                </Container>
-            </Container>
+            <NotLogged/>
         </>
     }
 
