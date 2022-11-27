@@ -1,9 +1,8 @@
-import {Container} from "../Container";
 import {useEffect, useState} from "react";
 import {handleFetch} from "../../functions/handleFetch";
-import {SingleItem} from "./SingleItem";
+import {Container} from "../Container";
 
-export const Items = () => {
+export const ItemsSelect = ({className, onChange, id}) => {
     const [items, setItems] = useState([])
     useEffect(() => {
         async function fetchItems() {
@@ -16,11 +15,10 @@ export const Items = () => {
         fetchItems()
     }, [])
     return <>
-        <Container className="all-items center-grid">
-            {items.map((item, index) => (
-                <SingleItem key={index} id={item.id} item_name={item.item_name} item_price={item.item_price}
-                            item_description={item.item_description} item_image_url={item.item_image_url}/>
+        <select className={className} onChange={onChange} id={id} required>
+            {items.map(item => (
+                <option key={item.id} value={item.id}>{item.id} - {item.item_name}</option>
             ))}
-        </Container>
+        </select>
     </>
 }

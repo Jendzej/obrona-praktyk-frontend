@@ -84,7 +84,7 @@ li {
     display: inline-block;
     text-align: center;
     /*width: 33%;*/
-    min-width: 33%;
+    min-width: 25%;
     max-width: 50%;
 }
 
@@ -95,6 +95,7 @@ ul {
 
 .transaction-item > img {
     max-width: 70%;
+    height: 100%;
 }
 
 .single-transaction {
@@ -125,4 +126,27 @@ ul {
 
 .edit-item-form {
     grid-row: 2;
+}
+
+.shopping-items {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.shopping-item {
+    grid-column: 1/-1;
+    max-height: 80px;
+    display: grid;
+    grid-template-columns: 40% 20% 20%;
+    padding: 0;
+    margin: 0;
+}
+
+.shopping-item > img {
+    height: 100%;
+}
+
+.admin-forms {
+    grid-row: 2;
+    display: grid;
 }

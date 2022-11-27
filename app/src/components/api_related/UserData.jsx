@@ -28,8 +28,9 @@ export const UserData = () => {
                 {userData.last_name}<br/>
                 {userData.email}<br/>
                 <Button id="logout" onClick={(e) => {
-                    localStorage.setItem('jwt-token', null)
-                    localStorage.setItem('logged', false)
+                    localStorage.removeItem('jwt-token')
+                    localStorage.removeItem('logged')
+                    localStorage.removeItem('shopping-cart')
                     window.location.reload(false)
                 }}>
                     Logout
@@ -38,7 +39,8 @@ export const UserData = () => {
         </>
     } else {
         localStorage.removeItem('jwt-token')
-        localStorage.setItem('logged', false)
+        localStorage.removeItem('logged')
+        localStorage.removeItem('shopping-cart')
     }
 
 }

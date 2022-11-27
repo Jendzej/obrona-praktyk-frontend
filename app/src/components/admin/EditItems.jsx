@@ -2,10 +2,10 @@ import {Form} from "../Form";
 import {Input} from "../Input";
 import {useState} from "react";
 import {Button} from "../Button";
-import {handleFetchJWT} from "../../functions/handleFetchJWT";
-import {handleFetch} from "../../functions/handleFetch";
 import {handleEditItem} from "../../functions/handleEditItem";
 import {Header} from "../Header";
+import {ItemsSelect} from "../api_related/ItemsSelect";
+import {useNavigate} from "react-router-dom";
 
 export const EditItems = () => {
     const [itemId, setItemId] = useState(null)
@@ -13,6 +13,7 @@ export const EditItems = () => {
     const [itemImageUrl, setItemImageUrl] = useState(null)
     const [itemPrice, setItemPrice] = useState(null)
     const [itemDescription, setItemDescription] = useState(null)
+    const navigate = useNavigate()
     return <>
         <Form method="POST" className="edit-item-form" onSubmit={async (e) => {
             e.preventDefault()
@@ -24,11 +25,12 @@ export const EditItems = () => {
             }
             const notNullUpdated = Object.fromEntries(Object.entries(updatedItem).filter(([_, v]) => v != null && v != ""))
             e.target.reset()
-            return await handleEditItem(itemId, notNullUpdated)
+            await handleEditItem(itemId, notNullUpdated)
+            navigate('/')
         }}>
             <Header size="3">Edit items</Header>
 
-            <Input label="Item id:" onChange={(e) => {
+            <ItemsSelect onChange={(e) => {
                 setItemId(e.target.value)
             }}/>
             <Input label="New item name:" onChange={(e) => {

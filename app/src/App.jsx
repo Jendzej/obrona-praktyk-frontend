@@ -5,7 +5,8 @@ import {User} from "./pages/User";
 import "./styles/stylesheet.css"
 import {NavBar} from "./components/NavBar";
 import {UserProvider} from "./components/UserProvider";
-import {Transactions} from "./components/api_related/Transactions";
+import {ShoppingCart} from "./components/ShoppingCart";
+import {Order} from "./components/api_related/Order";
 
 export default function App() {
     return <>
@@ -15,6 +16,8 @@ export default function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/user" element={<User/>}/>
+                <Route path="/shopping_cart" element={<ShoppingCart/>}/>
+                <Route path="/order" element={<Order/>}/>
             </Routes>
         </UserProvider>
     </>

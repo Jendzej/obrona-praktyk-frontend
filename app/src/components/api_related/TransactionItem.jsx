@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {handleFetchJWT} from "../../functions/handleFetchJWT";
 import {Container} from "../Container";
 import {Header} from "../Header";
@@ -15,11 +15,23 @@ export const TransactionItem = ({item_id, item_price}) => {
 
         fetchItemById()
     }, [])
-    return <>
-        <Container className="transaction-item">
-            <Header size="4" className="item-name">{item.item_name}, <i>{item_price} zł</i></Header>
-            <img src={item.item_image_url} alt="[Item image]"/>
-            <p>{item.item_description}</p>
-        </Container>
-    </>
+
+    if (item_price) {
+        return <>
+            <Container className="transaction-item">
+                <Header size="4" className="item-name">{item.item_name}, <i>{item_price} zł</i></Header>
+                <img src={item.item_image_url} alt="[Item image]"/>
+                <p>{item.item_description}</p>
+            </Container>
+        </>
+    } else {
+        return <>
+            <Container className="shopping-item">
+                <Header size="4">{item.item_name}</Header>
+                <Header size="4">{item.item_price}zł</Header>
+                <img src={item.item_image_url} alt="[Item image]"/>
+            </Container>
+        </>
+    }
+
 }

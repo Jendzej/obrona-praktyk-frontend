@@ -37,7 +37,7 @@ export const Transactions = () => {
                                 </>
                             })}
                             <Header size="3" className="transaction-price">Value of
-                                transaction: {transactionValue} zł</Header>
+                                transaction: {Math.round(transactionValue * 100) / 100} zł</Header>
                         </Container>
                     </>)
             })}

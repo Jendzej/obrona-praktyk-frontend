@@ -6,7 +6,6 @@ export const UserProvider = ({children}) => {
     const [token, setToken] = useState("")
     const [username, setUsername] = useState("")
     const [role, setRole] = useState("user")
-    const [response, setResponse] = useState("")
     const [logged, setLogged] = useState(false)
 
     const userInfo = {
@@ -16,8 +15,6 @@ export const UserProvider = ({children}) => {
         setToken: setToken,
         role: role,
         setRole: setRole,
-        response: response,
-        setResponse: setResponse,
         logged: logged,
         setLogged: setLogged
     }

@@ -1,6 +1,6 @@
-export async function handleFetchJWT(url, token) {
+export async function handleDelData(url, token) {
     const settings = {
-        method: 'GET',
+        method: 'DELETE',
         headers: {
             'accept': 'application/json',
             'Content-Type': 'application/json',
