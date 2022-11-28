@@ -4,15 +4,26 @@ import {UserContext} from "./UserProvider";
 
 export const NavBar = () => {
     const {role} = useContext(UserContext)
-    if (role === "admin") {
-        return <>
-            <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/user'>User</Link></li>
-                <li><Link to='/admin'>Admin</Link></li>
-                <li><Link to='/shopping_cart'>Shopping cart</Link></li>
-            </ul>
-        </>
+    const logged = localStorage.getItem('logged')
+    if (logged === "true") {
+        if (role === "admin") {
+            return <>
+                <ul>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/user'>User</Link></li>
+                    <li><Link to='/admin'>Admin</Link></li>
+                    <li><Link to='/shopping_cart'>Shopping cart</Link></li>
+                </ul>
+            </>
+        } else {
+            return <>
+                <ul>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/user'>User</Link></li>
+                    <li><Link to='/shopping_cart'>Shopping cart</Link></li>
+                </ul>
+            </>
+        }
     } else {
         return <>
             <ul>
@@ -21,5 +32,6 @@ export const NavBar = () => {
             </ul>
         </>
     }
+
 
 }

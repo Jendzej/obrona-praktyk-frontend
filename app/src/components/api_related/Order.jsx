@@ -12,7 +12,6 @@ export const Order = () => {
     const navigate = useNavigate()
     const [delTime, setDelTime] = useState("")
     const [delDate, setDelDate] = useState("")
-    console.log(itemsIds)
     return <>
         <Form method="POST" onSubmit={async (e) => {
             e.preventDefault()
@@ -21,7 +20,6 @@ export const Order = () => {
                 payment_status: "paid",
                 del_time: delDate + " " + delTime
             }
-            console.log(transactionData)
             const backend_host = process.env.REACT_APP_BACKEND_HOST
             const backend_port = process.env.REACT_APP_BACKEND_PORT
             const response = await handlePostData(`http://${backend_host}:${backend_port}/transaction`, transactionData)
