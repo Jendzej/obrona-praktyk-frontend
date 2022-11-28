@@ -3,7 +3,7 @@ import {Input} from "../Input";
 import {Form} from "../Form";
 import {useState} from "react";
 import {Button} from "../Button";
-import {SchoolClasses} from "./SchoolClasses";
+import {SchoolClasses} from "../api_related/SchoolClasses";
 
 export const Register = () => {
     const [username, setUsername] = useState("")

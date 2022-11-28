@@ -3,7 +3,7 @@ import {useState} from "react";
 import {Button} from "../Button";
 import {Form} from "../Form";
 import {handleDelData} from "../../functions/handleDelData";
-import {UsersSelect} from "../api_related/UsersSelect";
+import {UsersSelect} from "../user/UsersSelect";
 import {useNavigate} from "react-router-dom";
 
 export const DelUser = () => {

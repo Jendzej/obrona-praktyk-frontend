@@ -2,7 +2,7 @@ import {Form} from "../Form";
 import {Input} from "../Input";
 import {useState} from "react";
 import {Button} from "../Button";
-import {handleEditItem} from "../../functions/handleEditItem";
+import {handleEditData} from "../../functions/handleEditData";
 import {Header} from "../Header";
 import {ItemsSelect} from "../api_related/ItemsSelect";
 import {useNavigate} from "react-router-dom";
@@ -25,7 +25,7 @@ export const EditItems = () => {
             }
             const notNullUpdated = Object.fromEntries(Object.entries(updatedItem).filter(([_, v]) => v != null && v != ""))
             e.target.reset()
-            await handleEditItem(itemId, notNullUpdated)
+            await handleEditData(itemId, {updated_item: notNullUpdated}, 'item')
             navigate('/')
         }}>
             <Header size="3">Edit items</Header>

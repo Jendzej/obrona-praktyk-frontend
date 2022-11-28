@@ -5,14 +5,14 @@ import {AddItem} from "../components/admin/AddItem";
 import {DelItem} from "../components/admin/DelItem";
 import {DelUser} from "../components/admin/DelUser";
 import {useContext, useEffect} from "react";
-import {UserContext} from "../components/UserProvider";
+import {UserContext} from "../components/user/UserProvider";
 import {useNavigate} from "react-router-dom";
 
 export const Admin = () => {
     const {role} = useContext(UserContext)
     const navigate = useNavigate()
     useEffect(() => {
-        if(role !=="admin") {
+        if (role !== "admin") {
             navigate("/")
         }
     })

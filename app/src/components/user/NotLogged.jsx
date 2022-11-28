@@ -1,7 +1,7 @@
 import {Container} from "../Container";
 import {Header} from "../Header";
-import {Login} from "../api_related/Login";
-import {Register} from "../api_related/Register";
+import {Login} from "./Login";
+import {Register} from "./Register";
 
 export const NotLogged = () => {
     return <>

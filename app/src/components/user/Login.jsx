@@ -3,10 +3,10 @@ import {Form} from "../Form";
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {handleLogin} from "../../functions/handleLogin";
-import {UserContext} from "../UserProvider";
+import {UserContext} from "./UserProvider";
 
 export const Login = () => {
-    const {username, setUsername, setToken, setLogged} = useContext(UserContext)
+    const {username, setUsername, setLogged} = useContext(UserContext)
     const [password, setPassword] = useState("")
     return <>
         <Form method="POST" onSubmit={async (e) => {
@@ -23,7 +23,6 @@ export const Login = () => {
             if (results) {
                 localStorage.setItem('jwt-token', results['access_token'])
                 localStorage.setItem('logged', 'true')
-                setToken(results['access_token'])
                 setUsername(username)
                 setLogged(true)
             }

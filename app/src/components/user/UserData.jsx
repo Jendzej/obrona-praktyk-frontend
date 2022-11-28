@@ -1,13 +1,14 @@
 import {useContext, useEffect, useState} from "react";
 import {handleFetchJWT} from "../../functions/handleFetchJWT";
 import {Container} from "../Container";
-import {UserContext} from "../UserProvider";
+import {UserContext} from "./UserProvider";
 import {parseJWT} from "../../utilities/parseJWT";
 import {Button} from "../Button";
+import {EditUser} from "./EditUser";
 
 export const UserData = () => {
     const [userData, setUserData] = useState([])
-    const {token, role, setRole} = useContext(UserContext)
+    const {setRole, setUserId, setUsername, setLogged} = useContext(UserContext)
     useEffect(() => {
         async function fetchUserData() {
             const backend_host = process.env.REACT_APP_BACKEND_HOST
@@ -18,9 +19,10 @@ export const UserData = () => {
 
         fetchUserData()
     }, [])
-    setRole(userData.role)
+
     const rounded_date = Math.round(Date.now() / 1000)
     if (parseJWT(localStorage.getItem('jwt-token')).exp > rounded_date) {
+        setRole(userData.role)
         return <>
             <Container className="user-data center-grid">
                 {userData.username}<br/>
@@ -30,11 +32,17 @@ export const UserData = () => {
                 <Button id="logout" onClick={(e) => {
                     localStorage.removeItem('jwt-token')
                     localStorage.removeItem('logged')
+                    localStorage.removeItem('username')
                     localStorage.removeItem('shopping-cart')
+                    setUsername(null)
+                    setRole(null)
+                    setLogged(null)
+                    setUserId(null)
                     window.location.reload(false)
                 }}>
                     Logout
                 </Button>
+                <EditUser userId={userData.id}/>
             </Container>
         </>
     } else {

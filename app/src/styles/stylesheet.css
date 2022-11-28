@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     font-family: 'Mulish', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .centered {

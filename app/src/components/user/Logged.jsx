@@ -1,6 +1,6 @@
 import {Container} from "../Container";
 import {Header} from "../Header";
-import {UserData} from "../api_related/UserData";
+import {UserData} from "./UserData";
 import {Transactions} from "../api_related/Transactions";
 
 export const Logged = () => {

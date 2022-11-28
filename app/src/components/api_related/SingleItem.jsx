@@ -1,10 +1,14 @@
 import {Container} from "../Container";
 import {Header} from "../Header";
 import {Button} from "../Button";
-import {useState} from "react";
+import {useContext, useEffect} from "react";
+import {UserContext} from "../user/UserProvider";
 
 export const SingleItem = ({id, item_name, item_price, item_description, item_image_url}) => {
-    const logged = localStorage.getItem('logged')
+    const {logged} = useContext(UserContext)
+    useEffect(() => {
+        console.log(logged)
+    }, [])
     return <>
         <Container id={id} className="single-item center-grid">
             <Container className="content">
