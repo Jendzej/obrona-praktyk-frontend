@@ -2,18 +2,25 @@ body{
     margin: 0;
     padding: 0;
 }
-.header{
+ul{
     background-color: #000000;
     text-align: center;
-    display: static;
-    width: 325px;
-    color:rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    color: white;
     margin:auto;
+    /*top: 0;*/
   }
 
 li{
-    display: inline;
+    min-width: 20%;
+    max-width: 100%;
+    display: inline-block;
     text-decoration: none;
+    padding: auto;
+}
+li > a {
+    color: white;
 }
 .menu{
     margin:auto;
@@ -42,7 +49,6 @@ a{
     min-width: 100px;
     max-height: 250px;
     min-height: 50px;
-    text-align: ;
 }
 
 body,button{

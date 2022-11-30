@@ -23,7 +23,7 @@ export const EditItems = () => {
                 item_description: itemDescription,
                 item_image_url: itemImageUrl
             }
-            const notNullUpdated = Object.fromEntries(Object.entries(updatedItem).filter(([_, v]) => v != null && v != ""))
+            const notNullUpdated = Object.fromEntries(Object.entries(updatedItem).filter(([_, v]) => v !== null && v != ""))
             e.target.reset()
             await handleEditData(itemId, {updated_item: notNullUpdated}, 'item')
             navigate('/')

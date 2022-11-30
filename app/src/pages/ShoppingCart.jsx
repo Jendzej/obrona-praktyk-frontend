@@ -1,7 +1,7 @@
-import {Header} from "./Header";
-import {TransactionItem} from "./api_related/TransactionItem";
-import {Container} from "./Container";
-import {Button} from "./Button";
+import {Header} from "../components/Header";
+import {TransactionItem} from "../components/api_related/TransactionItem";
+import {Container} from "../components/Container";
+import {Button} from "../components/Button";
 import {useNavigate} from "react-router-dom";
 
 export const ShoppingCart = () => {
@@ -10,8 +10,7 @@ export const ShoppingCart = () => {
     if (itemsIds) {
         let itemsValue = 0
         return <>
-            <Header size="1">Shopping cart</Header>
-            <Container className="shopping-items">
+            <Container className="main shopping-items">
                 {itemsIds.map(item => {
                     itemsValue += item.price
                     return <>

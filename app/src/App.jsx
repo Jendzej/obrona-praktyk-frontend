@@ -5,8 +5,8 @@ import {User} from "./pages/User";
 import "./styles/stylesheet.css"
 import {NavBar} from "./components/NavBar";
 import {UserProvider} from "./components/user/UserProvider";
-import {ShoppingCart} from "./components/ShoppingCart";
-import {Order} from "./components/api_related/Order";
+import {ShoppingCart} from "./pages/ShoppingCart";
+import {Order} from "./pages/Order";
 
 export default function App() {
     return <>
