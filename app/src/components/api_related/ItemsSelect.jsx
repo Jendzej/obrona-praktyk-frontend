@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {handleFetch} from "../../functions/handleFetch";
-import {Container} from "../Container";
 
 export const ItemsSelect = ({className, onChange, id}) => {
     const [items, setItems] = useState([])

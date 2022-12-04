@@ -4,11 +4,13 @@ import {Input} from "../Input";
 import {Button} from "../Button";
 import {handleLogin} from "../../functions/handleLogin";
 import {UserContext} from "./UserProvider";
+import {Header} from "../Header";
 
 export const Login = () => {
     const {username, setUsername, setLogged} = useContext(UserContext)
     const [password, setPassword] = useState("")
     return <>
+        <Header size="2">Logowanie</Header>
         <Form method="POST" onSubmit={async (e) => {
             e.preventDefault()
             const response = handleLogin(username, password)
@@ -28,10 +30,10 @@ export const Login = () => {
             }
             window.location.reload(false)
         }}>
-            <Input id="username" label="Type username:" onChange={(e) => {
+            <Input id="username" label="Nazwa użytkownika:" onChange={(e) => {
                 setUsername(e.target.value)
             }}/>
-            <Input id="password" label="Type password:" type="password" onChange={(e) => {
+            <Input id="password" label="Hasło:" type="password" onChange={(e) => {
                 setPassword(e.target.value)
             }}/>
             <Button> Send </Button>

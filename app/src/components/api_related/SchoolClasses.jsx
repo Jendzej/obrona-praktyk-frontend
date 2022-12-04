@@ -16,6 +16,7 @@ export const SchoolClasses = ({className, onChange, id}) => {
     }, [])
     return <>
         <Container className={className}>
+            <label htmlFor={id}>Klasa: </label>
             <select className={className} onChange={onChange} id={id} required>
                 {schoolClasses.map(school_class => (
                     <option key={school_class.school_class}>{school_class.school_class}</option>

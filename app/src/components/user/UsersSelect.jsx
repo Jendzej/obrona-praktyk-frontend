@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import {handleFetch} from "../../functions/handleFetch";
 import {handleFetchJWT} from "../../functions/handleFetchJWT";
 
 export const UsersSelect = ({className, onChange, id}) => {

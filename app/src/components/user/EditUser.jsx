@@ -32,26 +32,26 @@ export const EditUser = ({userId}) => {
             await handleEditData(userId, {updated_user: notNullUpdated}, 'user')
         }}>
             <Header size="3">Edit user data</Header>
-            <Input label="New username" onChange={(e) => {
+            <Input label="Nowa nazwa użytkownika:" onChange={(e) => {
                 setUsername(e.target.value)
             }}/>
-            <Input label="New email" onChange={(e) => {
+            <Input label="Nowy email:" onChange={(e) => {
                 setEmail(e.target.value)
             }}/>
-            <Input label="New password" onChange={(e) => {
+            <Input label="Nowe hasło:" onChange={(e) => {
                 setPassword(e.target.value)
             }}/>
-            <Input label="New first name" onChange={(e) => {
+            <Input label="Nowe imię:" onChange={(e) => {
                 setFirstName(e.target.value)
             }}/>
-            <Input label="New last name" onChange={(e) => {
+            <Input label="Nowe nazwisko:" onChange={(e) => {
                 setLastName(e.target.value)
             }}/>
             <SchoolClasses onChange={(e) => {
                 setSchoolClass(e.target.value)
             }
             }/>
-            <Button>Submit</Button>
+            <Button>Edytuj użytkownika</Button>
 
         </Form>
     </>

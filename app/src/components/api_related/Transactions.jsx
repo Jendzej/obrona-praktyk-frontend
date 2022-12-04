@@ -20,7 +20,7 @@ export const Transactions = () => {
         const transactionTimes = transactionData.map(transaction => transaction.transaction_time)
         const grouped = [...new Set(transactionTimes)]
         return <>
-            <Header size="1">Transactions</Header>
+            <Header size="1">Lista transakcji</Header>
             {grouped.map(transactionTime => {
                 const transactionParsed = new Date(Date.parse(transactionTime)).toLocaleString()
                 let transactionValue = 0
@@ -36,16 +36,16 @@ export const Transactions = () => {
                                     <TransactionItem item_id={transaction.item_id} item_price={transaction.item_price}/>
                                 </>
                             })}
-                            <Header size="3" className="transaction-price">Value of
-                                transaction: {Math.round(transactionValue * 100) / 100} zł</Header>
+                            <Header size="3" className="transaction-price">Wartość
+                                transakcji: {Math.round(transactionValue * 100) / 100} zł</Header>
                         </Container>
                     </>)
             })}
         </>
     } else {
         return <>
-            <Header size="1">Transactions</Header>
-            <Header size="3">You don't have any transactions yet</Header>
+            <Header size="1">Lista transakcji</Header>
+            <Header size="3">Nie masz jeszcze żadnych transakcji...</Header>
         </>
     }
 

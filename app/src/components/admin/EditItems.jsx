@@ -28,24 +28,24 @@ export const EditItems = () => {
             await handleEditData(itemId, {updated_item: notNullUpdated}, 'item')
             navigate('/')
         }}>
-            <Header size="3">Edit items</Header>
+            <Header size="3">Edycja produktu</Header>
 
             <ItemsSelect onChange={(e) => {
                 setItemId(e.target.value)
             }}/>
-            <Input label="New item name:" onChange={(e) => {
+            <Input label="Nowa nazwa produktu:" onChange={(e) => {
                 setItemName(e.target.value)
             }}/>
-            <Input label="New item price:" onChange={(e) => {
+            <Input label="Nowa cena produktu:" onChange={(e) => {
                 setItemPrice(e.target.value)
             }}/>
-            <Input label="New item description:" onChange={(e) => {
+            <Input label="Nowy opis produktu:" onChange={(e) => {
                 setItemDescription(e.target.value)
             }}/>
-            <Input label="New item image URL:" onChange={(e) => {
+            <Input label="Nowy adres URL zdjęcia produktu:" onChange={(e) => {
                 setItemImageUrl(e.target.value)
             }}/>
-            <Button>Submit</Button>
+            <Button className="admin-button">Edytuj produkt</Button>
 
         </Form>
     </>

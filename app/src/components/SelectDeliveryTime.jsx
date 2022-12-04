@@ -1,6 +1,7 @@
 export const SelectDeliveryTime = ({className, onChange}) => {
     return <>
-        <select className={className} onChange={onChange}>
+        <label htmlFor="delivery">Wybierz godzinę dostawy:</label>
+        <select id="delivery" className={className} onChange={onChange}>
             <option>Przerwa 1. - 8:45</option>
             <option>Przerwa 2. - 9:35</option>
             <option>Przerwa 3. - 10:30</option>

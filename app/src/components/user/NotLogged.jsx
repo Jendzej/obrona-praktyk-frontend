@@ -4,11 +4,11 @@ import {Register} from "./Register";
 
 export const NotLogged = () => {
     return <>
-        <Container className="main centered">
-            <Container id="login" className="centered right_grid">
+        <Container className="main">
+            <Container id="login" className="centered">
                 <Login/>
             </Container>
-            <Container id="register" className="centered left-grid">
+            <Container id="register" className="centered">
                 <Register/>
             </Container>
         </Container>

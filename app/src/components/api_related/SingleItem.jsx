@@ -1,14 +1,9 @@
 import {Container} from "../Container";
 import {Header} from "../Header";
 import {Button} from "../Button";
-import {useContext, useEffect} from "react";
-import {UserContext} from "../user/UserProvider";
 
 export const SingleItem = ({id, item_name, item_price, item_description, item_image_url}) => {
-    const {logged} = useContext(UserContext)
-    useEffect(() => {
-        console.log(logged)
-    }, [])
+    const logged = localStorage.getItem('logged')
     return <>
         <Container id={id} className="single-item center-grid">
             <Container className="content">
@@ -17,6 +12,7 @@ export const SingleItem = ({id, item_name, item_price, item_description, item_im
                 </Header>
                 <p className="item-price"><b>Cena:</b> {item_price}zł</p>
                 <p className="item-description">{item_description}</p>
+                <img className="image" src={item_image_url} alt={item_name}/>
                 {logged === 'true' ? <Container className="add-to-cart">
                         <Button onClick={() => {
                             if (localStorage.getItem('shopping-cart') === null) {
@@ -29,10 +25,10 @@ export const SingleItem = ({id, item_name, item_price, item_description, item_im
                         }}>
                             Dodaj do koszyka
                         </Button></Container>
-                    : <Container></Container>}
-
+                    : <Container></Container>
+                }
             </Container>
-            <img className="image" src={item_image_url} alt="Cannot load image"/>
+
         </Container>
     </>
 }

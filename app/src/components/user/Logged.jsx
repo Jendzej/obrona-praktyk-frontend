@@ -4,7 +4,7 @@ import {Transactions} from "../api_related/Transactions";
 
 export const Logged = () => {
     return <>
-        <Container className="main centered center-grid">
+        <Container className="main">
             <UserData/>
         </Container>
         <Container className="transactions">

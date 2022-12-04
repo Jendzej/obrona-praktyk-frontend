@@ -10,7 +10,7 @@ export const DelItem = () => {
     const [itemToDel, setItemToDel] = useState('')
     const navigate = useNavigate()
     return <>
-        <Header size="3">Delete items</Header>
+        <Header size="3">Usuwanie produktu</Header>
         <Form method="DELETE" onSubmit={async (e) => {
             e.preventDefault()
             const backend_host = process.env.REACT_APP_BACKEND_HOST
@@ -21,7 +21,7 @@ export const DelItem = () => {
             <ItemsSelect onChange={(e) => {
                 setItemToDel(e.target.value)
             }}/>
-            <Button>Submit</Button>
+            <Button className="admin-button">Usuń</Button>
         </Form>
     </>
 }

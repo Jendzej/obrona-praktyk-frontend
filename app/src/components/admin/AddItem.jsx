@@ -26,20 +26,20 @@ export const AddItem = () => {
             await handlePostData(`http://${backend_host}:${backend_port}/item`, itemData)
             navigate('/')
         }}>
-            <Header size="3">Add items</Header>
-            <Input label="Item name: " onChange={(e) => {
+            <Header size="3">Dodawanie produktu</Header>
+            <Input label="Nazwa produktu: " onChange={(e) => {
                 setItemName(e.target.value)
             }}/>
-            <Input label="Item price: " onChange={(e) => {
+            <Input label="Cena produktu: " onChange={(e) => {
                 setItemPrice(e.target.value)
             }}/>
-            <Input label="Item description: " onChange={(e) => {
+            <Input label="Opis produktu: " onChange={(e) => {
                 setItemDescription(e.target.value)
             }}/>
-            <Input label="Item image URL: " onChange={(e) => {
+            <Input label="Adres URL zdjęcia produktu: " onChange={(e) => {
                 setItemImageUrl(e.target.value)
             }}/>
-            <Button>Submit</Button>
+            <Button className="admin-button">Dodaj produkt</Button>
         </Form>
     </>
 }

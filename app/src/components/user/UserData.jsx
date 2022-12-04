@@ -24,7 +24,7 @@ export const UserData = () => {
     if (parseJWT(localStorage.getItem('jwt-token')).exp > rounded_date) {
         setRole(userData.role)
         return <>
-            <Container className="user-data center-grid">
+            <Container className="user-data">
                 {userData.username}<br/>
                 {userData.first_name}<br/>
                 {userData.last_name}<br/>
@@ -40,7 +40,7 @@ export const UserData = () => {
                     setUserId(null)
                     window.location.reload(false)
                 }}>
-                    Logout
+                    Wyloguj się
                 </Button>
                 <EditUser userId={userData.id}/>
             </Container>

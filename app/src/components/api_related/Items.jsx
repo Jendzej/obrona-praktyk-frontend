@@ -16,7 +16,7 @@ export const Items = () => {
         fetchItems()
     }, [])
     return <>
-        <Container className="all-items center-grid">
+        <Container className="all-items">
             {items.map((item, index) => (
                 <SingleItem key={index} id={item.id} item_name={item.item_name} item_price={item.item_price}
                             item_description={item.item_description} item_image_url={item.item_image_url}/>
