@@ -5,14 +5,13 @@ import {Button} from "../Button";
 export const SingleItem = ({id, item_name, item_price, item_description, item_image_url}) => {
     const logged = localStorage.getItem('logged')
     return <>
-        <Container id={id} className="single-item center-grid">
-            <Container className="content">
+        <Container id={id} className="single-item">
                 <Header size={2}>
                     {item_name}
                 </Header>
-                <p className="item-price"><b>Cena:</b> {item_price}zł</p>
                 <p className="item-description">{item_description}</p>
                 <img className="image" src={item_image_url} alt={item_name}/>
+                <p className="item-price"><b>Cena:</b> {item_price}zł</p>
                 {logged === 'true' ? <Container className="add-to-cart">
                         <Button onClick={() => {
                             if (localStorage.getItem('shopping-cart') === null) {
@@ -27,7 +26,6 @@ export const SingleItem = ({id, item_name, item_price, item_description, item_im
                         </Button></Container>
                     : <Container></Container>
                 }
-            </Container>
 
         </Container>
     </>

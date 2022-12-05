@@ -17,7 +17,7 @@ export const NavBar = () => {
     if (logged === "true") {
         if (role === "admin") {
             return <>
-                <ul>
+                <ul className="header">
                     <li><Header size="1">{header}</Header></li>
                     <li><Link to='/'>Strona główna</Link></li>
                     <li><Link to='/user'>Konto</Link></li>
@@ -27,7 +27,7 @@ export const NavBar = () => {
             </>
         } else {
             return <>
-                <ul>
+                <ul className="header">
                     <li><Header size="1">{header}</Header></li>
                     <li><Link to='/'>Strona główna</Link></li>
                     <li><Link to='/user'>Konto</Link></li>
@@ -37,7 +37,7 @@ export const NavBar = () => {
         }
     } else {
         return <>
-            <ul>
+            <ul className="header">
                 <li><Header size="1">{header}</Header></li>
                 <li><Link to='/'>Strona główna</Link></li>
                 <li><Link to='/user'>Konto</Link></li>
