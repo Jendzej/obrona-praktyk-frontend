@@ -7,6 +7,7 @@ import {useContext, useEffect} from "react";
 import {UserContext} from "../components/user/UserProvider";
 import {useNavigate} from "react-router-dom";
 import {parseJWT} from "../utilities/parseJWT";
+import {AllTransactions} from "../components/admin/AllTransactions";
 
 export const Admin = () => {
     const {role} = useContext(UserContext)
@@ -20,6 +21,7 @@ export const Admin = () => {
         return (<>
             <Container className="main">
                 <Container className="admin-forms">
+                    <AllTransactions/>
                     <EditItems/>
                     <AddItem/>
                     <DelItem/>

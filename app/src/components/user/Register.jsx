@@ -17,26 +17,30 @@ export const Register = () => {
     return <>
         <Header size="2">Rejestracja</Header>
         <Form method="POST" onSubmit={(e) => {
-            handleRegister(username, email, first, last, password, schoolClass)
             e.preventDefault()
-            e.target.reset()
+            if (schoolClass) {
+                handleRegister(username, email, first, last, password, schoolClass)
+                e.target.reset()
+            } else {
+                alert("Aby utworzyć konto, proszę wybrać klasę.")
+            }
         }}>
-            <Input id="username" label="Nazwa użytkownika:" onChange={(e) => {
+            <Input id="username" label="Nazwa użytkownika:" required={true} onChange={(e) => {
                 setUsername(e.target.value)
             }}/>
-            <Input id="email" label="Email:" onChange={(e) => {
+            <Input id="email" label="Email:" required={true} onChange={(e) => {
                 setEmail(e.target.value)
             }}/>
-            <Input id="first" label="Imię:" onChange={(e) => {
+            <Input id="first" label="Imię:" required={true} onChange={(e) => {
                 setFirst(e.target.value)
             }}/>
-            <Input id="last" label="Nazwisko:" onChange={(e) => {
+            <Input id="last" label="Nazwisko:" required={true} onChange={(e) => {
                 setLast(e.target.value)
             }}/>
-            <Input id="password" label="Hasło:" type="password" onChange={(e) => {
+            <Input id="password" label="Hasło:" required={true} type="password" onChange={(e) => {
                 setPassword(e.target.value)
             }}/>
-            <SchoolClasses className="school_classes" id="school_classes" onChange={(e) => {
+            <SchoolClasses className="school_classes" required={true} id="school_classes" onChange={(e) => {
                 setSchoolClass(e.target.value)
             }}/>
             <Button type="submit"> Send </Button>

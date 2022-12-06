@@ -15,9 +15,13 @@ export const Login = () => {
             e.preventDefault()
             const response = handleLogin(username, password)
                 .then(value => {
+                    console.info(value)
                     if (value.status === 200) {
                         return value.json()
                     } else {
+                        if (value.status === 401) {
+                            alert("Nazwa użytkownika lub hasło są niepoprawne!")
+                        }
                         return false
                     }
                 })
@@ -30,10 +34,10 @@ export const Login = () => {
             }
             window.location.reload(false)
         }}>
-            <Input id="username" label="Nazwa użytkownika:" onChange={(e) => {
+            <Input id="username" label="Nazwa użytkownika:" required={true} onChange={(e) => {
                 setUsername(e.target.value)
             }}/>
-            <Input id="password" label="Hasło:" type="password" onChange={(e) => {
+            <Input id="password" label="Hasło:" required={true} type="password" onChange={(e) => {
                 setPassword(e.target.value)
             }}/>
             <Button> Send </Button>
