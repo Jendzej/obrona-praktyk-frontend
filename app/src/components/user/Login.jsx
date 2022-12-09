@@ -15,7 +15,6 @@ export const Login = () => {
             e.preventDefault()
             const response = handleLogin(username, password)
                 .then(value => {
-                    console.info(value)
                     if (value.status === 200) {
                         return value.json()
                     } else {

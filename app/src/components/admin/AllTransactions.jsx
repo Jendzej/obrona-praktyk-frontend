@@ -17,7 +17,6 @@ export const AllTransactions = () => {
     if (transactions.length !== 0) {
         const transactionTimes = transactions.map(transaction => transaction.transaction_time)
         const grouped = [...new Set(transactionTimes)]
-        console.log(grouped)
 
         return <>
             <Header size="3">Zamówienia użytkowników</Header>

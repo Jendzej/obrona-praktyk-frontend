@@ -20,7 +20,6 @@ export default async function handleRegister(username, email, first_name, last_n
 
         let response = fetch(`http://${backend_host}:${backend_port}/user/`, settings);
         const data = await response;
-        console.log(data)
         if (data.ok) {
             alert(`Successfully added new user with username '${username}'.`)
         } else {
