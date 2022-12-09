@@ -20,7 +20,7 @@ export const TransactionItem = ({item_id, item_price}) => {
         return <>
             <Container className="transaction-item">
                 <Header size="4" className="item-name">{item.item_name}, <i>{item_price} zł</i></Header>
-                <img src={item.item_image_url} alt={item.item_name}/>
+                <img className="image" src={item.item_image_url} alt={item.item_name}/>
                 <p>{item.item_description}</p>
             </Container>
         </>
@@ -29,7 +29,7 @@ export const TransactionItem = ({item_id, item_price}) => {
             <Container className="shopping-item">
                 <Header size="4">{item.item_name}</Header>
                 <Header size="4">{item.item_price}zł</Header>
-                <img src={item.item_image_url} alt={item.item_name}/>
+                <img className="image" src={item.item_image_url} alt={item.item_name}/>
             </Container>
         </>
     }
