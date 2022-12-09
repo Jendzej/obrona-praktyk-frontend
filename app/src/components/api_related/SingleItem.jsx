@@ -4,6 +4,7 @@ import {Button} from "../Button";
 import {parseJWT} from "../../utilities/parseJWT";
 
 export const SingleItem = ({id, item_name, item_price, item_description, item_image_url}) => {
+    const rounded_date = Math.round(Date.now() / 1000)
     const logged = (localStorage.getItem('logged') === 'true') && (parseJWT(localStorage.getItem('jwt-token')).exp > rounded_date)
 
     return <>
