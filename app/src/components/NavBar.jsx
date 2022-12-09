@@ -20,7 +20,7 @@ export const NavBar = () => {
 
     return <>
         <ul className="header">
-            <li><Header size="1">{header}</Header></li>
+            <Header size="1">{header}</Header>
             <li><Link to='/'>Strona główna</Link></li>
             <li><Link to='/user'>Konto</Link></li>
             {logged ? <li><Link to='/shopping_cart'>Koszyk</Link></li>

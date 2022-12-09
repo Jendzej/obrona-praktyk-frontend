@@ -45,10 +45,10 @@ a{
     font-family: 'Roboto Mono', monospace;
 }
 .image{
-    max-width: 500px;
-    min-width: 100px;
-    max-height: 250px;
-    min-height: 50px;
+    max-width: 50%;
+    /* min-width: 10%;  */
+    max-height: 50%;
+    /* min-height: 10%; */
 }
 
 body,button{
@@ -66,8 +66,11 @@ button{
 }
 .single-item{
     background-color: rgb(221, 221, 221);
-    height: 500px;
+    padding: 2%;
     text-align: center;
+    margin-bottom: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .all-items{
     width: 100%;
