@@ -1,4 +1,4 @@
-import {ItemsSelect} from "../api_related/ItemsSelect";
+import {AllItems} from "../api_related/AllItems";
 import {Header} from "../Header";
 import {useState} from "react";
 import {Button} from "../Button";
@@ -18,7 +18,7 @@ export const DelItem = () => {
             await handleDelData(`http://${backend_host}:${backend_port}/item/${itemToDel}`, localStorage.getItem('jwt-token'))
             navigate('/')
         }}>
-            <ItemsSelect onChange={(e) => {
+            <AllItems onChange={(e) => {
                 setItemToDel(e.target.value)
             }}/>
             <Button className="admin-button">Usuń</Button>

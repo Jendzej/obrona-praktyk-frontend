@@ -1,31 +1,35 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital@1&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital,wght@1,600&display=swap');
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
-ul{
+
+ul {
     background-color: #000000;
     text-align: center;
     position: fixed;
     width: 100%;
     color: white;
-    margin:auto;
+    margin: auto;
     /*top: 0;*/
-  }
+}
 
-li{
+li {
     min-width: 20%;
     max-width: 100%;
     display: inline-block;
     text-decoration: none;
     padding: auto;
 }
+
 li > a {
     color: white;
 }
-.header{
-    margin:auto;
+
+.header {
+    margin: auto;
     width: auto;
     text-align: center;
     background-color: rgb(0, 0, 0);
@@ -34,30 +38,32 @@ li > a {
     z-index: 10;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     position: sticky;
-    }
+}
 
-a{
+a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
-.content{
+.content {
     color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
-.image{
+
+.image {
     max-width: 50%;
     /* min-width: 10%;  */
     max-height: 50%;
     /* min-height: 10%; */
 }
 
-body,button{
-    
+body, button {
+
     font-family: 'Rubik', sans-serif;
 }
-button{
+
+button {
     background-color: #000000;
     border: none;
     color: white;
@@ -67,7 +73,8 @@ button{
     display: inline-block;
     font-size: 16px;
 }
-.single-item{
+
+.single-item {
     background-color: rgb(221, 221, 221);
     padding: 2%;
     text-align: center;
@@ -75,55 +82,84 @@ button{
     margin-left: 15%;
     margin-right: 15%;
 }
-.all-items{
+
+.all-items {
     width: 100%;
     max-width: auto;
     margin: auto;
     text-align: center;
 }
-.transaction-image, .shopping-image{
+
+.transaction-image, .shopping-image {
     max-width: 25%;
     max-height: 25%;
 
 }
-.transaction-item{
+
+.transaction-item {
     text-align: center;
 }
-.single-transaction, .shopping-item{
+
+.single-transaction, .shopping-item {
     background-color: rgb(221, 221, 221);
     padding: 10px;
     margin-bottom: 20px;
     margin-left: 5%;
     margin-right: 5%;
 }
-.header-list{
+
+.header-list {
     margin-left: 20px;
 }
-.main-konto{
-    text-align:center;
-    margin:auto;
+
+.main-konto {
+    text-align: center;
+    margin: auto;
 }
-#logout{
+
+#logout {
     margin-right: 1%;
 }
-.admin-forms{
+
+.admin-forms {
     padding: 2%;
 }
-.register-log,.login-log{
+
+.register-log, .login-log {
     padding: 2%;
 }
+
 /* .register-log>form>label{
     padding: 0.5%;
 } */
-.header-kosz{
+.header-kosz {
     padding: 1%;
 }
-.shopping-items{
+
+.shopping-items {
     text-align: center;
 }
-.button-cart{
+
+.button-cart {
     text-align: center;
 }
-.button-carts{
+
+.button-carts {
+    margin: 1%;
+}
+
+.header-name {
+    text-align: center;
+    background: black;
+    color: white;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.centered {
+    text-align: center;
+}
+
+#transaction-show {
     margin: 1%;
 }

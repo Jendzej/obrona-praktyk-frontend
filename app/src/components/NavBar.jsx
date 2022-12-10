@@ -19,8 +19,8 @@ export const NavBar = () => {
                         : console.log("wrong site")
 
     return <>
+        <Header className="header-name" size="1">{header}</Header>
         <ul className="header">
-            <Header size="1">{header}</Header>
             <li><Link to='/'>Strona główna</Link></li>
             <li><Link to='/user'>Konto</Link></li>
             {logged ? <li><Link to='/shopping_cart'>Koszyk</Link></li>

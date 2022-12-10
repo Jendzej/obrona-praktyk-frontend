@@ -4,7 +4,7 @@ import {useState} from "react";
 import {Button} from "../Button";
 import {handleEditData} from "../../functions/handleEditData";
 import {Header} from "../Header";
-import {ItemsSelect} from "../api_related/ItemsSelect";
+import {AllItems} from "../api_related/AllItems";
 import {useNavigate} from "react-router-dom";
 
 export const EditItems = () => {
@@ -30,7 +30,7 @@ export const EditItems = () => {
         }}>
             <Header size="3">Edycja produktu</Header>
 
-            <ItemsSelect onChange={(e) => {
+            <AllItems onChange={(e) => {
                 setItemId(e.target.value)
             }}/>
             <Input label="Nowa nazwa produktu:" onChange={(e) => {

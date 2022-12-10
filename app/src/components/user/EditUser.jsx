@@ -1,13 +1,12 @@
 import {useContext, useState} from "react";
-import {useNavigate} from "react-router-dom";
 import {Form} from "../Form";
 import {handleEditData} from "../../functions/handleEditData";
-import {Header} from "../Header";
 import {Input} from "../Input";
 import {SchoolClasses} from "../api_related/SchoolClasses";
 import {Button} from "../Button";
 import {Container} from "../Container";
 import {UserContext} from "./UserProvider";
+import {Header} from "../Header";
 
 export const EditUser = ({userId}) => {
     const [username, setUsername] = useState(null)
@@ -17,7 +16,6 @@ export const EditUser = ({userId}) => {
     const [lastName, setLastName] = useState(null)
     const [schoolClass, setSchoolClass] = useState(null)
     const {setRole, setUserId, setUsernameCxt, setLogged} = useContext(UserContext)
-    const navigate = useNavigate()
     return <>
         <Container id="edit-user">
             <Form method="POST" className="edit-user-form" onSubmit={async (e) => {
@@ -47,7 +45,7 @@ export const EditUser = ({userId}) => {
                     setUserId(null)
                 }
             }}>
-                <Header size="3">Edit user data</Header>
+                <Header size="3">Edycja danych użytkownika</Header>
                 <Input label="Nowa nazwa użytkownika:" onChange={(e) => {
                     setUsername(e.target.value)
                 }}/>
@@ -67,7 +65,7 @@ export const EditUser = ({userId}) => {
                     setSchoolClass(e.target.value)
                 }
                 }/>
-                <Button>Edytuj użytkownika</Button>
+                <Button>Zapisz</Button>
 
             </Form>
         </Container>
