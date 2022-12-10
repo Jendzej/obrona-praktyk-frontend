@@ -20,7 +20,7 @@ export const Transactions = () => {
         const transactionTimes = transactionData.map(transaction => transaction.transaction_time)
         const grouped = [...new Set(transactionTimes)]
         return <>
-            <Header size="1">Lista transakcji</Header>
+            <Header size="1" className="header-list">Lista transakcji</Header>
             {grouped.map(transactionTime => {
                 const transactionParsed = new Date(Date.parse(transactionTime)).toLocaleString()
                 let transactionValue = 0

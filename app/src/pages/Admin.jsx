@@ -21,11 +21,11 @@ export const Admin = () => {
         return (<>
             <Container className="main">
                 <Container className="admin-forms">
-                    <AllTransactions/>
                     <EditItems/>
                     <AddItem/>
                     <DelItem/>
                     <DelUser/>
+                    <AllTransactions/>
                 </Container>
             </Container>
         </>)

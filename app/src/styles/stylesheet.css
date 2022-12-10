@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital@1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital,wght@1,600&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@ a{
 .content{
     color: rgb(0, 0, 0);
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Rubik', sans-serif;
 }
 .image{
     max-width: 50%;
@@ -52,7 +54,8 @@ a{
 }
 
 body,button{
-    font-family: 'Roboto Mono', monospace;
+    
+    font-family: 'Rubik', sans-serif;
 }
 button{
     background-color: #000000;
@@ -77,4 +80,32 @@ button{
     max-width: auto;
     margin: auto;
     text-align: center;
+}
+.transaction-image{
+    max-width: 25%;
+    max-height: 25%;
+
+}
+.transaction-item{
+    text-align: center;
+}
+.single-transaction{
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.header-list{
+    margin-left: 20px;
+}
+.main-konto{
+    text-align:center;
+    margin:auto;
+}
+#logout{
+    margin-right: 1%;
+}
+.admin-forms{
+    padding: 2%;
 }
