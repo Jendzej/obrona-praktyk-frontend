@@ -5,10 +5,10 @@ import {Register} from "./Register";
 export const NotLogged = () => {
     return <>
         <Container className="main">
-            <Container id="login" className="centered">
+            <Container id="login" className="login-log">
                 <Login/>
             </Container>
-            <Container id="register" className="centered">
+            <Container id="register" className="register-log">
                 <Register/>
             </Container>
         </Container>

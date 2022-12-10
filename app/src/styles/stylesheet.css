@@ -81,7 +81,7 @@ button{
     margin: auto;
     text-align: center;
 }
-.transaction-image{
+.transaction-image, .shopping-image{
     max-width: 25%;
     max-height: 25%;
 
@@ -89,7 +89,7 @@ button{
 .transaction-item{
     text-align: center;
 }
-.single-transaction{
+.single-transaction, .shopping-item{
     background-color: rgb(221, 221, 221);
     padding: 10px;
     margin-bottom: 20px;
@@ -108,4 +108,22 @@ button{
 }
 .admin-forms{
     padding: 2%;
+}
+.register-log,.login-log{
+    padding: 2%;
+}
+/* .register-log>form>label{
+    padding: 0.5%;
+} */
+.header-kosz{
+    padding: 1%;
+}
+.shopping-items{
+    text-align: center;
+}
+.button-cart{
+    text-align: center;
+}
+.button-carts{
+    margin: 1%;
 }
