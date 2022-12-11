@@ -29,6 +29,7 @@ export const UserData = () => {
                 <p>Nazwa użytkownika: {userData.username}</p>
                 <p>Imię: {userData.first_name}</p>
                 <p>Nazwisko: {userData.last_name}</p>
+                <p>Klasa: {userData.school_class}</p>
                 <p>Email: {userData.email}</p>
                 <Button id="logout" onClick={(e) => {
                     localStorage.removeItem('jwt-token')
