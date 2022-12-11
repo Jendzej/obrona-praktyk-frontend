@@ -30,9 +30,11 @@ export const Admin = () => {
                     <EditItems/>
                     <AddItem/>
                     <DelItem/>
+                    <hr/>
                     <AllUsers toShow={true}/>
                     <EditUser/>
                     <DelUser/>
+                    <hr/>
                     <AllTransactions/>
                     <EditTransaction/>
                     <DelTransactions/>
