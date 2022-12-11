@@ -13,13 +13,19 @@ export const Order = () => {
     const navigate = useNavigate()
     const [delTime, setDelTime] = useState("")
     const [delDate, setDelDate] = useState("")
+    const [paymentMethod, setPaymentMethod] = useState("not paid")
     return <>
-        <Container>
+        <Container className="order-form">
             <Form method="POST" onSubmit={async (e) => {
                 e.preventDefault()
+                let paymentStatus
+                paymentMethod === "cash" ? paymentStatus = "not_paid"
+                    : paymentMethod === "blik" ? paymentStatus = "paid"
+                        : paymentMethod === "transfer" ? paymentStatus = "pending"
+                            : paymentStatus = "not_paid"
                 const transactionData = {
                     items: itemsIds,
-                    payment_status: "paid",
+                    payment_status: paymentStatus,
                     del_time: delDate + " " + delTime
                 }
                 const backend_host = process.env.REACT_APP_BACKEND_HOST
@@ -27,16 +33,21 @@ export const Order = () => {
                 await handlePostData(`http://${backend_host}:${backend_port}/transaction`, transactionData)
                 localStorage.removeItem('shopping-cart')
                 navigate('/user')
-
             }}>
-                <Input type="date" onChange={(e) => {
+                <Input type="date" label="Wybierz dzień dostawy:" id="order-select" onChange={(e) => {
                     setDelDate(e.target.value)
                 }}/>
-                <SelectDeliveryTime onChange={(e) => {
-                    setDelTime((e.target.value).split("- ").pop())
-                }}/>
-                <SelectPaymentMethod/>
-                <Button>Kup</Button>
+                <Container className="order-select">
+                    <SelectDeliveryTime onChange={(e) => {
+                        setDelTime((e.target.value).split("- ").pop())
+                    }}/>
+                </Container>
+                <Container className="order-select">
+                    <SelectPaymentMethod onChange={(e) => {
+                        setPaymentMethod(e.target.value)
+                    }}/><br/>
+                </Container>
+                <Button id="buy-button">Kup</Button>
             </Form>
         </Container>
     </>

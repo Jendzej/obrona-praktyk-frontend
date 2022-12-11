@@ -5,6 +5,9 @@ import {Button} from "../components/Button";
 import {useNavigate} from "react-router-dom";
 
 export const ShoppingCart = () => {
+    if (localStorage.getItem('shopping-cart') === null) {
+        localStorage.setItem('shopping-cart', JSON.stringify([]))
+    }
     const itemsIds = JSON.parse(localStorage.getItem('shopping-cart'))
     const navigate = useNavigate()
     if (itemsIds.length > 0) {

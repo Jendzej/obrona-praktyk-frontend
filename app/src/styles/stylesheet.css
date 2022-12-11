@@ -163,3 +163,11 @@ button {
 #transaction-show {
     margin: 1%;
 }
+
+.order-select {
+    margin: 1%;
+}
+
+.order-form {
+    text-align: center;
+}

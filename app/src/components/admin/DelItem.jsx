@@ -20,7 +20,7 @@ export const DelItem = () => {
         }}>
             <AllItems onChange={(e) => {
                 setItemToDel(e.target.value)
-            }}/>
+            }}/><br/>
             <Button className="admin-button">Usuń</Button>
         </Form>
     </>

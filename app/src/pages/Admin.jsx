@@ -11,6 +11,8 @@ import {AllTransactions} from "../components/admin/AllTransactions";
 import {EditUser} from "../components/admin/EditUser";
 import {AllUsers} from "../components/api_related/AllUsers";
 import {AllItems} from "../components/api_related/AllItems";
+import {EditTransaction} from "../components/admin/EditTransaction";
+import {DelTransactions} from "../components/admin/DelTransactions";
 
 export const Admin = () => {
     const {role} = useContext(UserContext)
@@ -32,6 +34,8 @@ export const Admin = () => {
                     <EditUser/>
                     <DelUser/>
                     <AllTransactions/>
+                    <EditTransaction/>
+                    <DelTransactions/>
                 </Container>
             </Container>
         </>)

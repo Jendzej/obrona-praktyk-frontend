@@ -20,7 +20,7 @@ export const DelUser = () => {
         }}>
             <UsersSelect onChange={(e) => {
                 setUserToDel(e.target.value)
-            }}/>
+            }}/><br/>
             <Button className="admin-button">Usuń</Button>
         </Form>
     </>

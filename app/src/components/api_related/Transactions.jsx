@@ -20,7 +20,6 @@ export const Transactions = () => {
     }, [])
 
     const showButton = document.getElementById("transaction-show")
-    console.log(showButton)
     if (showButton !== null) {
         if (showTransactions) {
             showButton.textContent = "Ukryj wszystkie zamówienia"
@@ -43,6 +42,7 @@ export const Transactions = () => {
                 {grouped.map(transactionTime => {
                     const transactionParsed = new Date(Date.parse(transactionTime)).toLocaleString()
                     let transactionValue = 0
+                    let transactionDeliveryTime = 0
                     return (
                         <>
                             {!showTransactions ? <Container></Container>
@@ -52,11 +52,15 @@ export const Transactions = () => {
                                     </Container>
                                     {transactionData.filter(transaction => transaction.transaction_time === transactionTime).map(transaction => {
                                         transactionValue += transaction.item_price
+                                        transactionDeliveryTime = transaction.delivery_time
                                         return <>
                                             <TransactionItem item_id={transaction.item_id}
                                                              item_price={transaction.item_price}/>
                                         </>
                                     })}
+                                    <Header size="3"
+                                            className="transaction-delivery">Czas
+                                        dostawy: {new Date(Date.parse(transactionDeliveryTime)).toLocaleString()}</Header>
                                     <Header size="3" className="transaction-price">Wartość
                                         zamówienia: {Math.round(transactionValue * 100) / 100} zł</Header>
                                 </Container>}
