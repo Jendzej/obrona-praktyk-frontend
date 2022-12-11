@@ -39,29 +39,31 @@ export const Transactions = () => {
                     setShowTransactions(!showTransactions)
                 }}>Pokaż wszystkie zamówienia</Button>
             </Container>
-            {grouped.map(transactionTime => {
-                const transactionParsed = new Date(Date.parse(transactionTime)).toLocaleString()
-                let transactionValue = 0
-                return (
-                    <>
-                        {!showTransactions ? <Container></Container>
-                            : <Container className="single-transaction" id={transactionTime}>
-                                <Container className='transaction-time'>
-                                    <Header size="3">Data zamówienia: {transactionParsed}</Header>
-                                </Container>
-                                {transactionData.filter(transaction => transaction.transaction_time === transactionTime).map(transaction => {
-                                    transactionValue += transaction.item_price
-                                    return <>
-                                        <TransactionItem item_id={transaction.item_id}
-                                                         item_price={transaction.item_price}/>
-                                    </>
-                                })}
-                                <Header size="3" className="transaction-price">Wartość
-                                    zamówienia: {Math.round(transactionValue * 100) / 100} zł</Header>
-                            </Container>}
+            <Container className="all-transactions">
+                {grouped.map(transactionTime => {
+                    const transactionParsed = new Date(Date.parse(transactionTime)).toLocaleString()
+                    let transactionValue = 0
+                    return (
+                        <>
+                            {!showTransactions ? <Container></Container>
+                                : <Container className="single-transaction" id={transactionTime}>
+                                    <Container className='transaction-time'>
+                                        <Header size="3">Data zamówienia: {transactionParsed}</Header>
+                                    </Container>
+                                    {transactionData.filter(transaction => transaction.transaction_time === transactionTime).map(transaction => {
+                                        transactionValue += transaction.item_price
+                                        return <>
+                                            <TransactionItem item_id={transaction.item_id}
+                                                             item_price={transaction.item_price}/>
+                                        </>
+                                    })}
+                                    <Header size="3" className="transaction-price">Wartość
+                                        zamówienia: {Math.round(transactionValue * 100) / 100} zł</Header>
+                                </Container>}
 
-                    </>)
-            })}
+                        </>)
+                })}
+            </Container>
         </>
     } else {
         return <>
