@@ -39,7 +39,7 @@ export const AddItem = () => {
             <Input label="Adres URL zdjęcia produktu: " onChange={(e) => {
                 setItemImageUrl(e.target.value)
             }}/>
-            <Button className="admin-button">Dodaj produkt</Button>
+            <Button className="admin-button">Zapisz</Button>
         </Form>
     </>
 }

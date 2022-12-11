@@ -45,7 +45,7 @@ export const EditItems = () => {
             <Input label="Nowy adres URL zdjęcia produktu:" onChange={(e) => {
                 setItemImageUrl(e.target.value)
             }}/>
-            <Button className="admin-button">Edytuj produkt</Button>
+            <Button className="admin-button">Zapisz</Button>
 
         </Form>
     </>
