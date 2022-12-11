@@ -58,8 +58,7 @@ a {
     /* min-height: 10%; */
 }
 
-body, button {
-
+body, button, select, option, #order-select {
     font-family: 'Rubik', sans-serif;
 }
 
@@ -170,4 +169,28 @@ button {
 
 .order-form {
     text-align: center;
+}
+
+input, select {
+    margin: 0.5%;
+}
+
+select, #order-select {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size: 16px;*/
+}
+
+input:focus {
+    background-color: #dadada;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
 }
