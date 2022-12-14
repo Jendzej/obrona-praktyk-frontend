@@ -1,0 +1,196 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital@1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&family=Rubik:ital,wght@1,600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    background-color: #000000;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    color: white;
+    margin: auto;
+    /*top: 0;*/
+}
+
+li {
+    min-width: 20%;
+    max-width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    padding: auto;
+}
+
+li > a {
+    color: white;
+}
+
+.header {
+    margin: auto;
+    width: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: sticky;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.content {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.image {
+    max-width: 50%;
+    /* min-width: 10%;  */
+    max-height: 50%;
+    /* min-height: 10%; */
+}
+
+body, button, select, option, #order-select {
+    font-family: 'Rubik', sans-serif;
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.single-item {
+    background-color: rgb(221, 221, 221);
+    padding: 2%;
+    text-align: center;
+    margin-bottom: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.all-items {
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.transaction-image, .shopping-image {
+    max-width: 25%;
+    max-height: 25%;
+
+}
+
+.transaction-item {
+    text-align: center;
+}
+
+.single-transaction, .shopping-item {
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.header-list {
+    margin-left: 20px;
+}
+
+.main-konto {
+    text-align: center;
+    margin: auto;
+}
+
+#logout {
+    margin-right: 1%;
+}
+
+.admin-forms {
+    padding: 2%;
+}
+
+.register-log, .login-log {
+    padding: 2%;
+}
+
+/* .register-log>form>label{
+    padding: 0.5%;
+} */
+.header-kosz {
+    padding: 1%;
+}
+
+.shopping-items {
+    text-align: center;
+}
+
+.button-cart {
+    text-align: center;
+}
+
+.button-carts {
+    margin: 1%;
+}
+
+.header-name {
+    text-align: center;
+    background: black;
+    color: white;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.centered {
+    text-align: center;
+}
+
+#transaction-show {
+    margin: 1%;
+}
+
+.order-select {
+    margin: 1%;
+}
+
+.order-form {
+    text-align: center;
+}
+
+input, select {
+    margin: 0.5%;
+}
+
+select, #order-select {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size: 16px;*/
+}
+
+input:focus {
+    background-color: #dadada;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
