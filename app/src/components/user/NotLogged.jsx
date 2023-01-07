@@ -4,7 +4,7 @@ import {Register} from "./Register";
 
 export const NotLogged = () => {
     return <>
-        <Container className="main">
+        <Container id="not-logged" className="main">
             <Container id="login" className="login-log">
                 <Login/>
             </Container>

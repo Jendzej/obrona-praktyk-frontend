@@ -30,7 +30,7 @@ export const EditUser = ({userId}) => {
                 }
                 e.target.reset()
 
-                const notNullUpdated = Object.fromEntries(Object.entries(updatedUser).filter(([_, v]) => v != null && v != ""))
+                const notNullUpdated = Object.fromEntries(Object.entries(updatedUser).filter(([_, v]) => v !== null && v != ""))
                 await handleEditData(userId, {updated_user: notNullUpdated}, 'user')
                 if (username !== null || password !== null) {
                     localStorage.removeItem('jwt-token')

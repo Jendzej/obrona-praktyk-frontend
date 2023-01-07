@@ -15,8 +15,8 @@ export const Register = () => {
     const [schoolClass, setSchoolClass] = useState("")
 
     return <>
-        <Header size="2">Rejestracja</Header>
-        <Form method="POST" onSubmit={(e) => {
+        <Header size="2" id="register-header">Rejestracja</Header>
+        <Form method="POST" id="register-form" onSubmit={(e) => {
             e.preventDefault()
             if (schoolClass) {
                 handleRegister(username, email, first, last, password, schoolClass)

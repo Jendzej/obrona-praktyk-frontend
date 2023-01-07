@@ -27,7 +27,7 @@ export const SingleItem = ({id, item_name, item_price, item_description, item_im
                     }}>
                         Dodaj do koszyka
                     </Button></Container>
-                : <Container></Container>
+                : <Button disabled={true} title="Możliwość dodania do koszyka dostępna po zalogowaniu"></Button>
             }
 
         </Container>

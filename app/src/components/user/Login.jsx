@@ -10,8 +10,8 @@ export const Login = () => {
     const {username, setUsername, setLogged} = useContext(UserContext)
     const [password, setPassword] = useState("")
     return <>
-        <Header size="2">Logowanie</Header>
-        <Form method="POST" onSubmit={async (e) => {
+        <Header size="2" id="login-header">Logowanie</Header>
+        <Form method="POST" id="login-form" onSubmit={async (e) => {
             e.preventDefault()
             const response = handleLogin(username, password)
                 .then(value => {
